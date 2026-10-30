@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- Nova Pet's home page: the store listing's "website" (AdMob finds app-ads.txt through it).
+     Live at https://ruiqa1.github.io/nova-pet/ since 2026-10-30 (store/README.md). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova Pet</title>
+<style>
+/* One screen, same look as the privacy page. System fonts only: the page loads nothing from other sites. */
+:root {
+  --bg: #f7f5fc;
+  --ink: #221b38;
+  --muted: #5d5676;
+  --night: #3b2a6e;
+  --mint: #24735a;
+  --line: #dcd6ea;
+  --gold: #8a5a00;
+  --gold-soft: #fff1cf;
+  --display: ui-rounded, "SF Pro Rounded", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15111f; --ink: #ece8f7; --muted: #a9a2c2; --night: #c9b8ff; --mint: #6fdcb2; --line: #362d50;
+    --gold: #f2c14e; --gold-soft: #3a2f14;
+    color-scheme: dark;
+  }
+}
+body {
+  margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 36rem; margin: 0 auto; padding-block: 48px 56px; display: grid; gap: 18px; }
+h1 { font-family: var(--display); color: var(--night); font-size: 2.4rem; line-height: 1.1; margin: 0; }
+p { margin: 0; }
+a { color: var(--night); }
+.tag { font-family: var(--display); font-weight: 650; color: var(--mint); font-size: 1.15rem; }
+.links { display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 14px; }
+.muted { color: var(--muted); font-size: .95rem; }
+.maker { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: .95rem; }
+.maker img { display: block; width: 100px; height: auto; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Nova Pet</h1>
+  <p class="tag">Your own alien friend</p>
+  <p>A game for Android, made for children aged 6 to 15. Care for a cute virtual alien pet, play 10 mini-games and fix its little ship.</p>
+  <div class="links">
+    <p><a href="privacy.html">Privacy policy</a></p>
+    <p>Contact: <a href="mailto:novagamesdevs@gmail.com">novagamesdevs@gmail.com</a></p>
+  </div>
+  <p class="maker"><span>Made by</span>
+    <picture>
+      <source srcset="../nova-games/nova_games_logo_on_dark.png" media="(prefers-color-scheme: dark)">
+      <img src="../nova-games/nova_games_logo_on_light.png" alt="Nova Games" width="100" height="80">
+    </picture>
+  </p>
+  <p class="muted">Nova Games Devs on Google Play.</p>
+</main>
+</body>
+</html>
