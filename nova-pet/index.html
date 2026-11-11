@@ -1,13 +1,19 @@
 <!doctype html>
 <!-- Nova Pet's home page: the store listing's "website" (AdMob finds app-ads.txt through it).
-     Live at https://ruiqa1.github.io/nova-pet/ since 2026-10-30 (store/README.md). -->
+     Live at https://ruiqa1.github.io/nova-pet/ since 2026-10-30 (store/README.md).
+     11 Nov 2026 (launch audit S5): the launch date, three store screenshots (home/, smaller copies of
+     store/graphics/screenshots/01, 05 and 06) and the grown-ups' facts, for visitors from the social
+     accounts' bios. The date line follows the Sunday rule in store/launch_plan.md ("soon" if 8 Dec no
+     longer holds); on 8 Dec it becomes "Free on Google Play" with the site/home link in
+     store/outreach/links.md. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nova Pet: a cozy virtual alien pet game for Android, for children aged 6 to 15, made by one developer in Romania. Coming to Google Play on 8 December.">
 <title>Nova Pet</title>
 <style>
-/* One screen, same look as the privacy page. System fonts only: the page loads nothing from other sites. */
+/* Same look as the privacy page. System fonts only: the page loads nothing from other sites. */
 :root {
   --bg: #f7f5fc;
   --ink: #221b38;
@@ -34,9 +40,17 @@ body {
 }
 .wrap { max-width: 36rem; margin: 0 auto; padding-block: 48px 56px; display: grid; gap: 18px; }
 h1 { font-family: var(--display); color: var(--night); font-size: 2.4rem; line-height: 1.1; margin: 0; }
+h2 { font-family: var(--display); color: var(--night); font-size: 1.25rem; margin: 6px 0 0; }
 p { margin: 0; }
 a { color: var(--night); }
 .tag { font-family: var(--display); font-weight: 650; color: var(--mint); font-size: 1.15rem; }
+.soon {
+  justify-self: start; font-family: var(--display); font-weight: 650; color: var(--gold);
+  background: var(--gold-soft); border-radius: 999px; padding: 4px 14px;
+}
+.shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0; }
+.shots img { display: block; width: 100%; height: auto; border-radius: 12px; }
+ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
 .links { display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 14px; }
 .muted { color: var(--muted); font-size: .95rem; }
 .maker { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: .95rem; }
@@ -47,7 +61,21 @@ a { color: var(--night); }
 <main class="wrap">
   <h1>Nova Pet</h1>
   <p class="tag">Your own alien friend</p>
-  <p>A game for Android, made for children aged 6 to 15. Care for a cute virtual alien pet, play 10 mini-games and fix its little ship.</p>
+  <p class="soon">Coming to Google Play on 8 December</p>
+  <p>A cozy virtual alien pet game for Android, made for children aged 6 to 15 by one developer in Romania. Care for a cute virtual alien pet, play 10 mini-games and fix its little ship.</p>
+  <div class="shots">
+    <img src="home/shot-01-friend.jpg" alt="Your own alien friend: the alien on its little planet" width="360" height="640">
+    <img src="home/shot-05-ship.jpg" alt="Fix its little ship, day by day" width="360" height="640">
+    <img src="home/shot-06-rover.jpg" alt="Drive and paint your Rover" width="360" height="640">
+  </div>
+  <h2>For grown-ups</h2>
+  <ul>
+    <li>The alien can't die: after a weekend away, it's simply happy to see you again.</li>
+    <li>It plays offline: the pet, the mini-games and the story need no Wi-Fi or data.</li>
+    <li>Free to download. From the second day, a short video now and then between games, at most 5 a day. One purchase, No ads, removes every video.</li>
+    <li>No accounts and no chat. The ads come from Google AdMob with its child settings: no personalised ads and no advertising ID.</li>
+    <li>Purchases, Reset Game and the privacy policy link sit behind a grown-up check.</li>
+  </ul>
   <div class="links">
     <p><a href="privacy.html">Privacy policy</a></p>
     <p>Contact: <a href="mailto:novagamesdevs@gmail.com">novagamesdevs@gmail.com</a></p>
